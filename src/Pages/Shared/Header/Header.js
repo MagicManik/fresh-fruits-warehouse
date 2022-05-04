@@ -21,25 +21,25 @@ const Header = () => {
                                 Fruits Warehouse
                             </Offcanvas.Title>
                         </Offcanvas.Header>
-                        <Offcanvas.Body className='p-0 pe-4'>
+                        <Offcanvas.Body className='p-0 ps-2'>
                             <Nav className="justify-content-end flex-grow-1">
 
-                                <Nav.Link className='p-0'>
+                                <Nav.Link className='p-0 text-center'>
                                     <CustomLink to={'/home'}>Home</CustomLink>
                                 </Nav.Link >
 
-                                <Nav.Link className='p-0'>
+                                <Nav.Link className='p-0 text-center'>
                                     <CustomLink to={'/login'}>Login</CustomLink>
                                 </Nav.Link>
-                                <Nav.Link className='p-0'>
+                                <Nav.Link className='p-0 text-center'>
                                     <CustomLink to={'/logout'}>Log out</CustomLink>
                                 </Nav.Link>
 
-                                <Nav.Link className='p-0'>
+                                <Nav.Link className='p-0 text-center'>
                                     <CustomLink to={'/register'}>Register</CustomLink>
                                 </Nav.Link>
 
-                                <Nav.Link className='p-0'>
+                                <Nav.Link className='p-0 text-center'>
                                     <CustomLink to={'/about'}>About</CustomLink>
                                 </Nav.Link>
                             </Nav>

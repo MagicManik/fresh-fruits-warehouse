@@ -1,18 +1,17 @@
 .custom-link-active-container {
     padding: 0px 16px;
-    background-color: #fce8e6;
+    background-color: rgba(60, 64, 67, .08);
     border-radius: 5px 5px 0px 0px;
-    border-bottom: 2px solid #d93025;
+    border-bottom: 2px solid #fa8fbd;
 }
 
 .custom-link-disable-container {
     padding: 0px 16px;
-    border-bottom: 2px solid #1a73e8;
 }
 
 
 .custom-link-active {
-    color: #1a73e8;
+    color: #222222;
     text-decoration: none;
     font-size: 1.20rem;
 
@@ -27,28 +26,29 @@
 
 @media screen and (max-width: 576px) {
     .custom-link-active-container {
-        background-color: #e8f0fe;
-        padding: 4px 12px;
-        border-radius: 0 50px 50px 0;
+        background-color: rgba(26, 115, 232, 0.122);
+        padding: 10px 12px;
+        border-radius: 50px 0 0 50px;
         border-bottom: none;
     }
 
     .custom-link-disable-container {
         background-color: transparent;
-        padding: 4px 12px;
+        padding: 10px 12px;
         border-radius: 0 50px 50px 0;
         border-bottom: none;
     }
 
     .custom-link-active {
         color: #1a73e8;
-        padding-left: 30px;
-        font-size: 1rem;
+        font-size: 16px;
+        font-weight: 600;
+
     }
 
     .custom-link-disable {
-        color: #444746;
-        padding-left: 30px;
-        font-size: 1rem;
+        color: #3c4043;
+        font-size: 16px;
+        font-weight: 500;
     }
 }
