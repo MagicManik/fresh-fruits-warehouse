@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
+import Loading from '../../Shared/Loading/Loading';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -55,9 +56,12 @@ const Login = () => {
     // handle error
     let errorElement;
     if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+        errorElement = <p className='text-danger text-center mt-2 mb-0'>Error: {error?.message}</p>
     }
 
+    if (loading) {
+        return <Loading></Loading>
+    }
 
     // Form Submit Event Handler
     const handleLoginForm = event => {
