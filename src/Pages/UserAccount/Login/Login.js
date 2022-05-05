@@ -52,14 +52,13 @@ const Login = () => {
 
 
                 <div className='method-divider-container mt-3'>
-                    <p className='mx-auto'>New to Fresh Fruits Warehouse <Link className='link-button' to={'/register'}>Please Login</Link></p>
+
+                    <p className='mx-auto'>New to Fresh Fruits Warehouse <Link className='link-button' to={'/register'}>Please Register</Link></p>
                     <p className='mx-auto'>Forgotten Password? <button className='link-button'>Password Reset</button></p>
 
                     <div className='d-flex'>
                         <div className='right-divider'></div>
-
                         <p className='mx-2'>or</p>
-
                         <div className='left-divider'></div>
                     </div>
 

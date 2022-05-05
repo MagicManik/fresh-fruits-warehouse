@@ -56,9 +56,7 @@ const Register = () => {
 
                     <div className='d-flex'>
                         <div className='right-divider'></div>
-
                         <p className='mx-2'>or</p>
-
                         <div className='left-divider'></div>
                     </div>
 

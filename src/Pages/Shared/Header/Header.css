@@ -49,6 +49,14 @@
     display: flex;
 }
 
+.log-out-btn {
+    background-color: transparent;
+    border: none;
+    color: #5f6368;
+    font-size: 1.20rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
 @media screen and (max-width: 576px) {
     .off-canvas-body {
         margin-top: 10px !important;
