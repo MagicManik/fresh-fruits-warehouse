@@ -2,10 +2,16 @@
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: saturate(180%) blur(20px);
     border-bottom: 1px solid rgb(226, 226, 226);
+    padding: 12px !important;
+}
+
+.title-logo {
+    color: #5f6368 !important;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #offcanvasNavbar {
-    width: 86%;
+    width: 85.5%;
 }
 
 .offcanvas-title {
@@ -38,8 +44,22 @@
     height: 20px !important;
 }
 
+
+.nav-item {
+    display: flex;
+}
+
 @media screen and (max-width: 576px) {
     .off-canvas-body {
         margin-top: 10px !important;
+    }
+
+    .navbar-style {
+        padding: 4.1px !important;
+    }
+
+    .nav-item {
+        display: flex;
+        flex-direction: column;
     }
 }

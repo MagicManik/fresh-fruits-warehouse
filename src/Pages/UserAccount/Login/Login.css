@@ -1,0 +1,17 @@
+.link-button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #0d6efd;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link-button:hover {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #0d6efd;
+    text-decoration: underline;
+    cursor: pointer;
+}

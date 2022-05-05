@@ -70,6 +70,18 @@
     margin-top: 15px;
 }
 
+/* Changed Default Webkit Input Field Style */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #f0f0f0 inset !important;
+    -webkit-text-fill-color: #333 !important;
+}
+
+.toggle-register a {
+    text-decoration: none !important;
+}
 
 
 @media screen and (max-width: 576px) {
