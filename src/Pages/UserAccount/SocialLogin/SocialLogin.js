@@ -8,10 +8,10 @@ const SocialLogin = () => {
         <div>
 
             <div className='social-login-container'>
-                <button className='social-login-btn'><img src={google} alt="" /> Github Login</button>
+                <button className='social-login-btn'><img src={google} alt="" /> Goooogle Login</button>
             </div>
             <div className='social-login-container'>
-                <button className='social-login-btn'><img src={facebook} alt="" /> Github Login</button>
+                <button className='social-login-btn'><img src={facebook} alt="" /> Facebook Login</button>
             </div>
 
         </div>
