@@ -3,6 +3,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import loginImage from '../image/login.png'
+import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 
 const Login = () => {
@@ -53,7 +54,7 @@ const Login = () => {
 
                 <div className='method-divider-container mt-3'>
 
-                    <p className='mx-auto'>New to Fresh Fruits Warehouse <Link className='link-button' to={'/register'}>Please Register</Link></p>
+                    <p className='mx-auto'>New to our Warehouse <Link className='link-button' to={'/register'}>Please Register</Link></p>
                     <p className='mx-auto'>Forgotten Password? <button className='link-button'>Password Reset</button></p>
 
                     <div className='d-flex'>
@@ -61,6 +62,8 @@ const Login = () => {
                         <p className='mx-2'>or</p>
                         <div className='left-divider'></div>
                     </div>
+
+                    <SocialLogin></SocialLogin>
 
                 </div>
 

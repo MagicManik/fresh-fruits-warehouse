@@ -4,6 +4,7 @@ import auth from '../../../firebase.init';
 import registrationImage from '../image/register.png'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import './Register.css'
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
 
@@ -60,6 +61,8 @@ const Register = () => {
                         <div className='left-divider'></div>
                     </div>
 
+
+                    <SocialLogin></SocialLogin>
                 </div>
 
 
