@@ -29,7 +29,7 @@ const Register = () => {
 
 
                 <div className='method-divider-container mt-3'>
-                    <p className='mx-auto fs-5'>Already have an accout? <Link to={'/login'}>Please Login</Link></p>
+                    <p className='mx-auto'>Already have an accout? <Link to={'/login'}>Please Login</Link></p>
 
 
 

@@ -27,14 +27,14 @@
 @media screen and (max-width: 576px) {
     .custom-link-active-container {
         background-color: rgba(26, 115, 232, 0.122);
-        padding: 10px 12px;
+        padding: 11px 12px;
         border-radius: 50px 0 0 50px;
         border-bottom: none;
     }
 
     .custom-link-disable-container {
         background-color: transparent;
-        padding: 10px 12px;
+        padding: 11px 12px;
         border-radius: 0 50px 50px 0;
         border-bottom: none;
     }

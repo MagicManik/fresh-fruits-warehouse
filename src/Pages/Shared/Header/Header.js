@@ -6,7 +6,7 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <Navbar className='navbar-style' collapseOnSelect expand="lg">
+        <Navbar sticky='top' className='navbar-style p-1' collapseOnSelect expand="lg">
             <Container>
                 <Navbar.Brand className='title-logo fs-5 fw-bold' as={Link} to="/">Fresh Fruits Warehouse</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -16,12 +16,12 @@ const Header = () => {
                         aria-labelledby="offcanvasNavbarLabel"
                         placement="end"
                     >
-                        <Offcanvas.Header className='p-2 px-3 mb-3 border-bottom' closeButton>
+                        <Offcanvas.Header className='border-bottom offcanvas-title' closeButton>
                             <Offcanvas.Title id="offcanvasNavbarLabel">
                                 Fruits Warehouse
                             </Offcanvas.Title>
                         </Offcanvas.Header>
-                        <Offcanvas.Body className='p-0 ps-2'>
+                        <Offcanvas.Body className='p-0 ps-2 off-canvas-body'>
                             <Nav className="justify-content-end flex-grow-1">
 
                                 <Nav.Link className='p-0 text-center'>
