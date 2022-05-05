@@ -1,3 +1,13 @@
+.form-title {
+    padding: 0 8px;
+    margin-bottom: 21px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: rgb(77, 77, 77);
+    letter-spacing: 7px;
+    text-align: center;
+}
+
 .link-button {
     background: none;
     border: none;

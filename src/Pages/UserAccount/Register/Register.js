@@ -39,13 +39,15 @@ const Register = () => {
 
             <div>
 
+
                 <form onSubmit={handleRegisterForm} className='form-container'>
+                    <h3 className='form-title'>PLEASE REGISTER!!</h3>
 
-                    <input className='input-field' type="text" name="name" id="" placeholder='Your Name' />
+                    <input className='input-field' type="text" name="name" id="" placeholder='Your Name' required />
 
-                    <input className='input-field' type="email" name="email" id="" placeholder='Your Email' />
+                    <input className='input-field' type="email" name="email" id="" placeholder='Your Email' required />
 
-                    <input className='input-field' type="password" name="password" id="" placeholder='Password' />
+                    <input className='input-field' type="password" name="password" id="" placeholder='Password' required />
 
                     <input className='mx-auto input-btn' type="submit" value="REGISTER" />
 

@@ -3,7 +3,7 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
-    margin: 100px 100px;
+    margin: 50px 100px;
 }
 
 .form-image img {
