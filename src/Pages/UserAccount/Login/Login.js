@@ -4,15 +4,17 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
-import './Login.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../../Shared/Loading/Loading';
+import './Login.css'
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
 
-    // _______ to collecte input value _______
+    // to collecte input value
     const handleEmail = event => {
         setEmail(event.target.value);
     }
@@ -29,14 +31,14 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
 
     // Password Reset Event Handler
     const handleResetPassword = async () => {
         if (email) {
             await sendPasswordResetEmail(email);
-            alert('Sent email');
+            toast('Sent email');
         }
         else {
             alert('Please Enter Your Email Address')
@@ -59,6 +61,7 @@ const Login = () => {
         errorElement = <p className='text-danger text-center mt-2 mb-0'>Error: {error?.message}</p>
     }
 
+    // handle loading
     if (loading) {
         return <Loading></Loading>
     }
@@ -107,6 +110,7 @@ const Login = () => {
                     </div>
 
                     <SocialLogin></SocialLogin>
+                    <ToastContainer></ToastContainer>
 
                 </div>
 
