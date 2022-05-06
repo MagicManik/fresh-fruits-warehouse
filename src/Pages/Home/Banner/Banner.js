@@ -29,6 +29,8 @@ const Banner = () => {
                             <h1 className='carousel-heading'>Fresh Fruits Warehouse
                                 !!</h1>
                             <p className='carousel-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, aperiam fuga quidem, dolorum voluptatibus consequatur corporis eaque dolor facilis nisi animi perspiciatis accusamus exercitationem facere quisquam quaerat laboriosam eveniet qui.</p>
+                            <button onClick={handleMyWarehouse} className='my-warehouse-btn'>MY WAREHOUSE</button>
+
                         </div>
                         <div className='col-lg-6 col-12'>
                             <img className="d-block img-fluid" src={banner1} alt="First slide" />
@@ -42,6 +44,8 @@ const Banner = () => {
                         <div className='col-lg-6 col-12 p-3'>
                             <h1 className='carousel-heading'>Fresh Fruits Warehouse !!</h1>
                             <p className='carousel-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, aperiam fuga quidem, dolorum voluptatibus consequatur corporis eaque dolor facilis nisi animi perspiciatis accusamus exercitationem facere quisquam quaerat laboriosam eveniet qui.</p>
+                            <button onClick={handleMyWarehouse} className='my-warehouse-btn'>MY WAREHOUSE</button>
+
                         </div>
                         <div className='col-lg-6 col-12'>
                             <img className="d-block img-fluid" src={banner2} alt="First slide" />
@@ -55,6 +59,9 @@ const Banner = () => {
                         <div className='col-lg-6 col-12 p-3'>
                             <h1 className='carousel-heading'>Fresh Fruits Warehouse !!</h1>
                             <p className='carousel-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, aperiam fuga quidem, dolorum voluptatibus consequatur corporis eaque dolor facilis nisi animi perspiciatis accusamus exercitationem facere quisquam quaerat laboriosam eveniet qui.</p>
+                            <button onClick={handleMyWarehouse} className='my-warehouse-btn'>MY WAREHOUSE</button>
+
+
                         </div>
                         <div className='col-lg-6 col-12'>
                             <img className="d-block img-fluid" src={banner3} alt="First slide" />
@@ -64,7 +71,6 @@ const Banner = () => {
 
             </Carousel>
 
-            <button onClick={handleMyWarehouse} className='my-warehouse-btn'>MY WAREHOUSE</button>
         </section>
 
 

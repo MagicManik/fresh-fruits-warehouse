@@ -15,13 +15,16 @@
 }
 
 .carousel-text {
+    margin-top: 20px;
     letter-spacing: 1px;
     line-height: 1.8em;
     font-family: 'Open Sans', sans-serif;
 }
 
 .my-warehouse-btn {
-    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
     border: none;
     color: white;
     text-align: end;
@@ -53,6 +56,8 @@
     }
 
     .my-warehouse-btn {
+        margin-top: 20px;
+        padding-right: 50px;
         width: 90%;
     }
 
