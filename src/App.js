@@ -6,6 +6,7 @@ import MyStocks from './Pages/MyStocks/MyStocks';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
+import UpdateStoke from './Pages/UpdateStoke/UpdateStoke';
 import Login from './Pages/UserAccount/Login/Login';
 import LogOut from './Pages/UserAccount/LogOut/LogOut';
 import Register from './Pages/UserAccount/Register/Register';
@@ -28,6 +29,9 @@ function App() {
         <Route path='/logout' element={<LogOut></LogOut>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/about' element={<About></About>}></Route>
+
+
+        <Route path='/update/:id' element={<UpdateStoke></UpdateStoke>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
