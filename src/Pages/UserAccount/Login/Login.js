@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import loginImage from '../image/login.png'
+import loginImage from '../image/login.png';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -90,7 +90,7 @@ const Login = () => {
 
                     <input onBlur={handlePassword} className='input-field' type="password" name="password" id="" placeholder='Password' required />
 
-                    <input className='mx-auto input-btn' type="submit" value="REGISTER" />
+                    <input className='mx-auto input-btn' type="submit" value="LOGIN" />
 
                     {errorElement}
 

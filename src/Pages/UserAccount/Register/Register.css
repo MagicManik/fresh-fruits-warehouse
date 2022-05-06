@@ -1,9 +1,10 @@
 .form-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
     align-items: center;
     justify-content: center;
-    margin: 50px 100px;
+    margin: 60px 100px;
 }
 
 .form-image img {
@@ -87,6 +88,7 @@ input:-webkit-autofill:active {
 @media screen and (max-width: 576px) {
     .form-section {
         grid-template-columns: 1fr;
+        grid-gap: 0;
         margin: 0 16px;
     }
 
