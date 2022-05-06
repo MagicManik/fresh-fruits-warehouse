@@ -1,0 +1,17 @@
+.inventory-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 70px;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+@media screen and (max-width: 576px) {
+    .inventory-container {
+        grid-template-columns: 1fr;
+        margin: 0 10px;
+        grid-gap: 10px;
+    }
+}
