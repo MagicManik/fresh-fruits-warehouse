@@ -19,3 +19,16 @@
     border: 2px solid #ffad18;
     position: relative;
 }
+
+
+@media screen and (max-width: 576px) {
+    .stock-container {
+        grid-template-columns: 1fr;
+        margin: 0 10px;
+        grid-gap: 10px;
+    }
+
+    .stock {
+        height: 800px;
+    }
+}

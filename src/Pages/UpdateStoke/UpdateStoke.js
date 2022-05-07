@@ -11,6 +11,33 @@ const UpdateStoke = () => {
 
     const { _id, img, name, price, quantity, description, supplier } = inventory;
 
+
+
+    // const handleUpdateStock = event => {
+    //     event.preventDefault();
+
+    //     const updatedStock = event.target.updatedstock.value;
+
+    //     const newStock = { updatedStock };
+
+    //     const url = `http://localhost:5000/update/${id}`
+
+    //     fetch(url, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(newStock)
+    //     })
+
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data)
+    //         })
+
+    // }
+
+
     return (
         <section>
             <h3 className='form-title mt-5'>Please Update <span className='text-danger'>{name}</span> stock !!</h3>
@@ -36,8 +63,8 @@ const UpdateStoke = () => {
                     <img className='img-fluid mb-5' src={updatingImg} alt="" />
 
                     <form>
-                        <h1 className='form-title pb-5'>Update Your Stock</h1>
-                        <input className='input-field mb-4' type="number" name="" id="" placeholder='Enter Your Carton Quantity' />
+                        <h1 className='form-title pb-5 mx-4px'>Update Your Stock</h1>
+                        <input className='input-field mb-4' type="number" name="updatedstock" id="" placeholder='Enter Your Carton Quantity' />
 
                         <input className='input-btn w-100' type="submit" value="Update" />
 

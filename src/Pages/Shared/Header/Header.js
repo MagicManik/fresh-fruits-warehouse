@@ -44,6 +44,9 @@ const Header = () => {
                                                 <CustomLink to={'/mystocks'}>My Stocks</CustomLink>
                                             </Nav >
                                             <Nav className='p-0 text-center'>
+                                                <CustomLink to={'/add'}>Add Item</CustomLink>
+                                            </Nav >
+                                            <Nav className='p-0 text-center'>
                                                 <button className='log-out-btn text-center mx-3' onClick={logout}>Log Out</button>
                                             </Nav>
                                         </div>
