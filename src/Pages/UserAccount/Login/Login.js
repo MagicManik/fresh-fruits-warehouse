@@ -1,29 +1,18 @@
 import React, { useState } from 'react';
-import loginImage from '../image/login.png';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import SocialLogin from '../SocialLogin/SocialLogin';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Loading from '../../Shared/Loading/Loading';
+import loginImage from '../image/login.png';
 import './Login.css'
+import { ToastContainer } from 'react-toastify';
+import SocialLogin from '../SocialLogin/SocialLogin';
+
 
 const Login = () => {
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-
-    // to collecte input value
-    const handleEmail = event => {
-        setEmail(event.target.value);
-    }
-    const handlePassword = event => {
-        setPassword(event.target.value);
-    }
-
-
-    // collect from fire base hooks
     const [
         signInWithEmailAndPassword,
         user,
@@ -31,45 +20,56 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
-    // Password Reset Event Handler
     const handleResetPassword = async () => {
-        if (email) {
-            await sendPasswordResetEmail(email);
-            toast('Sent email');
-        }
-        else {
-            alert('Please Enter Your Email Address')
-        }
+        await sendPasswordResetEmail(email);
+        alert('Sent email');
     }
 
 
-    // user navigate
+    let errorElement;
+    if (error) {
+        errorElement = <p>Error: {error.message}</p>
+    }
+
+
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
-    if (user) {
-        navigate(from, { replace: true });
+
+
+    // catch input email
+    const handleEmail = event => {
+        setEmail(event.target.value);
+    }
+    // catch input password
+    const handlePassword = event => {
+        setPassword(event.target.value)
     }
 
 
-    // handle error
-    let errorElement;
-    if (error) {
-        errorElement = <p className='text-danger text-center mt-2 mb-0'>Error: {error?.message}</p>
-    }
-
-    // handle loading
-    if (loading) {
-        return <Loading></Loading>
-    }
-
-    // Form Submit Event Handler
+    // ______ handle submit form _______
     const handleLoginForm = event => {
         event.preventDefault();
-        signInWithEmailAndPassword(email, password);
+        signInWithEmailAndPassword(email, password)
+
+
+        // Post data in server for token purpos
+        fetch('http://localhost:5000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email })
+        })
+            .then(res => res.json())
+            .then(data => {
+                localStorage.setItem('accessToken', data.accessToken);
+                navigate(from, { replace: true });
+                event.target.reset();
+            })
 
     }
 
@@ -116,7 +116,8 @@ const Login = () => {
 
 
             </div>
-        </section>);
+        </section>
+    );
 };
 
 export default Login;
