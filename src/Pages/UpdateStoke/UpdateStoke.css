@@ -1,0 +1,21 @@
+.stock-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 70px;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.stock {
+    width: 100%;
+    height: 750px;
+    padding: 28px;
+    border-radius: 18px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border: 2px solid #ffad18;
+    position: relative;
+}

@@ -25,7 +25,7 @@ const Inventory = ({ inventory }) => {
 
 
             <div>
-                <button onClick={() => handleStoke(_id)} className='inventory-button'>UPDATE STOKE</button>
+                <button onClick={() => handleStoke(_id)} className='inventory-button'>UPDATE STOCK</button>
             </div>
 
 
