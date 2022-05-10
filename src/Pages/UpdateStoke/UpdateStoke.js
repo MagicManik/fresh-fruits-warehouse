@@ -20,7 +20,7 @@ const UpdateStoke = () => {
         const updatedItem = { newQuantity };
 
         // update data to server
-        const url = `http://localhost:5000/inventory/${id}`
+        const url = `https://fresh-fruits-warehouse.herokuapp.com/inventory/${id}`
 
         fetch(url, {
             method: 'PUT',
@@ -49,7 +49,7 @@ const UpdateStoke = () => {
         const updatedItem = { newQuantity };
 
         // update data to server
-        const url = `http://localhost:5000/inventory/${id}`
+        const url = `https://fresh-fruits-warehouse.herokuapp.com/inventory/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {

@@ -21,7 +21,7 @@ const AddItem = () => {
         // console.log(item);
 
 
-        fetch('http://localhost:5000/inventory', {
+        fetch('https://fresh-fruits-warehouse.herokuapp.com/inventory', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
