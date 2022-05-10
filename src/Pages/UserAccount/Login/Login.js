@@ -6,6 +6,7 @@ import loginImage from '../image/login.png';
 import './Login.css'
 import { ToastContainer } from 'react-toastify';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import useToken from '../../../hooks/useToken';
 
 
 const Login = () => {
@@ -29,15 +30,26 @@ const Login = () => {
     }
 
 
+
+    const [token] = useToken(user);
+
+
     let errorElement;
     if (error) {
         errorElement = <p>Error: {error.message}</p>
     }
 
 
+
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
+
+
+    // after get verified user redirect to the previous page
+    if (token) {
+        navigate(from, { replace: true });
+    }
 
 
     // catch input email
@@ -56,20 +68,20 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
 
 
-        // Post data in server for token purpos
-        fetch('http://localhost:5000/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ email })
-        })
-            .then(res => res.json())
-            .then(data => {
-                localStorage.setItem('accessToken', data.accessToken);
-                navigate(from, { replace: true });
-                event.target.reset();
-            })
+        // // Post data in server for token purpos
+        // fetch('http://localhost:5000/login', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     },
+        //     body: JSON.stringify({ email })
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         localStorage.setItem('accessToken', data.accessToken);
+        //         navigate(from, { replace: true });
+        //         event.target.reset();
+        //     })
 
     }
 
@@ -78,7 +90,7 @@ const Login = () => {
         <section className='form-section'>
 
             <div className='form-image'>
-                <img src={loginImage} alt="" />
+                <img className='img-fluid' src={loginImage} alt="" />
             </div>
 
             <div>

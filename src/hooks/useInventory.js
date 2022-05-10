@@ -7,7 +7,7 @@ const useInventory = id => {
         fetch(`http://localhost:5000/inventory/${id}`)
             .then(res => res.json())
             .then(data => setInventory(data))
-    }, [id]);
+    }, [id, inventory]);
 
     return [inventory, setInventory];
 }

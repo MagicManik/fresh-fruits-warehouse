@@ -4,7 +4,7 @@ import './Loading.css'
 
 const Loading = () => {
     return (
-        <div className='spinner-container'>
+        <div style={{ height: '300px' }} className='w-100 d-flex justify-content-center align-items-center'>
             <Spinner animation="border" variant="primary" />
         </div>
     );

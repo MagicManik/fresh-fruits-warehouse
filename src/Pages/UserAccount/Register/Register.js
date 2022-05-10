@@ -1,34 +1,49 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import registrationImage from '../image/register.png'
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import './Register.css'
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Loading from '../../Shared/Loading/Loading';
+import useToken from '../../../hooks/useToken';
 
 const Register = () => {
 
+    // Using react firebase hook
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
     const [updateProfile, updating] = useUpdateProfile(auth);
 
 
-    const navigate = useNavigate();
-    if (user) {
-        navigate('/')
-    }
+    // const navigate = useNavigate();
+    // if (user) {
+    //     navigate('/')
+    // }
 
-    if (loading) {
-        return <loading></loading>
+    const [token] = useToken(user);
+
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+    if (loading || updating) {
+        return <Loading></Loading>
     }
 
     let errorElement;
     if (error) {
         errorElement = <p className='text-danger text-center'>Error: {error?.message}</p>
+    }
+
+    if (token) {
+        navigate(from, { replace: true });
     }
 
     const handleRegisterForm = async event => {

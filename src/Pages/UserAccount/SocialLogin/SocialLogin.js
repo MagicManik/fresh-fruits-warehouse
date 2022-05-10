@@ -2,14 +2,28 @@ import React from 'react';
 import google from '../image/google.png'
 import facebook from '../image/facebook.png'
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
-
 import './SocialLogin.css'
 import auth from '../../../firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
+import useToken from '../../../hooks/useToken';
+import Loading from '../../Shared/Loading/Loading';
 
 const SocialLogin = () => {
 
+    // Using firebase hook
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+
+    const [token] = useToken(user);
+
+    if (loading) {
+        return <Loading></Loading>
+    }
 
 
     let errorElement;
@@ -18,10 +32,7 @@ const SocialLogin = () => {
     }
 
 
-    const navigate = useNavigate();
-    const location = useLocation();
-    const from = location.state?.from?.pathname || "/";
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
 
