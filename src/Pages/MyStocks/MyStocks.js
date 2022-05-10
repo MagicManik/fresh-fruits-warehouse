@@ -4,9 +4,10 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import axiosPrivate from '../../api/axiosPrivate';
 import auth from '../../firebase.init';
+import MyStock from './MyStock';
+import './MyStocks.css'
 
 const MyStocks = () => {
-
 
     const [user] = useAuthState(auth);
     const [stocks, setStocks] = useState([]);
@@ -30,15 +31,49 @@ const MyStocks = () => {
             }
         }
         getOrders();
-    }, [user])
+    }, [user, navigate])
 
+
+    // Delete items button handler
+    const handleDeleteStock = id => {
+
+        const proceed = window.confirm('Are you sure to delete?');
+
+        if (proceed) {
+
+            const url = `http://localhost:5000/inventory/${id}`
+
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    const remainingStocks = stocks.filter(stock => stock._id !== id);
+                    setStocks(remainingStocks);
+                })
+        }
+    };
 
 
     return (
-        <div>
-            <h1>This is my stocke componetnt {stocks.length}</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, consequatur qui repudiandae sit voluptates rerum voluptatem maxime accusantium ratione officia voluptate quisquam odit, distinctio porro nam perferendis praesentium, odio reprehenderit!</p>
-        </div>
+        <section className='inventories-section py-5'>
+            <div className='mx-auto my-2 container'>
+                <div className="title-text">
+                    <h1 className='text-center'>All Items Are Added By You</h1>
+                </div>
+                <div className='ineventory-container'>
+                    {
+                        stocks.map(stock =>
+
+                            <MyStock key={stock._id} stock={stock}
+                                handleDeleteStock={handleDeleteStock}>
+                            </MyStock>
+
+                        )
+                    }
+                </div>
+            </div>
+        </section>
     );
 };
 
