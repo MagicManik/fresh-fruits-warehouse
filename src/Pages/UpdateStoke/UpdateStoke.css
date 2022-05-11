@@ -6,6 +6,43 @@
 }
 
 .stock {
+    height: 650px;
     border: 2px solid red;
     padding: 20px;
+    position: relative;
+}
+
+.restock-btn {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid #007aff;
+    box-shadow: 0 0 0 3px rgb(0 122 255 / 25%);
+    border-radius: 10px;
+    font-weight: bold;
+    color: #007aff;
+    letter-spacing: 1px;
+    background: rgb(0 122 255 / 25%);
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+
+.restock-input {
+    position: absolute;
+    bottom: 80px;
+    width: 90%;
+    display: block;
+    margin: 8px auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d6d6d6;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    outline: rgb(255, 220, 220);
 }

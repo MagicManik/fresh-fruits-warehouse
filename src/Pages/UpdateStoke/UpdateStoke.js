@@ -17,10 +17,14 @@ const UpdateStoke = () => {
 
         // new Quantity
         const newQuantity = parseInt(quantity) - 1;
+
+        if (newQuantity < 0) {
+            return alert('Stock Not Available')
+        }
         const updatedItem = { newQuantity };
 
         // update data to server
-        const url = `https://fresh-fruits-warehouse.herokuapp.com/inventory/${id}`
+        const url = `https://shrouded-mountain-52584.herokuapp.com/inventory/${id}`
 
         fetch(url, {
             method: 'PUT',
@@ -42,14 +46,22 @@ const UpdateStoke = () => {
     const handleUpdateQuantity = event => {
         event.preventDefault();
 
+        if (!event.target.quantity.value) {
+            return alert('Please enter your stock quantity')
+        }
         // update quantity
         const restockedQuantity = event.target.quantity.value;
-        const newQuantity = inventory.quantity + parseInt(restockedQuantity);
+        const newQuantity = parseInt(inventory.quantity) + parseInt(restockedQuantity);
+
+
+        if (newQuantity < 0) {
+            return alert('Insufficient Quantity')
+        }
 
         const updatedItem = { newQuantity };
 
         // update data to server
-        const url = `https://fresh-fruits-warehouse.herokuapp.com/inventory/${id}`
+        const url = `https://shrouded-mountain-52584.herokuapp.com/inventory/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -66,31 +78,24 @@ const UpdateStoke = () => {
 
     return (
         <section>
-            <h3 className='text-center my-5'>Please Update <span className='text-danger'>{name}</span> stock !!</h3>
+            <h3 className='text-center my-5'>Please Update Your <span className='text-danger'>{name}</span> stock !!</h3>
             <div className='stock-container'>
 
                 <div className='stock'>
 
                     <img className='img-fluid d-block mx-auto' src={img} alt="" />
-                    <h5 className='inventory-text mt-4'>{name}</h5>
+                    <h5 className='inventory-text my-2'>{name}</h5>
                     <h6 className='inventory-text'>Per Carton: ${price}</h6>
                     <h6 className='inventory-text'>Product ID: {_id}</h6>
                     <h6 className='inventory-text'>Quantity Availble: {quantity} </h6>
-                    <p className='inventory-text'>{description}</p>
-                    <h6 className='inventory-text'>Supplier: <span className='text-primary'>{supplier}</span></h6>
+                    <small className='inventory-text'>{description}</small>
+                    <h6 className='inventory-text my-3'>Supplier: <span className='text-primary'>{supplier}</span></h6>
 
                     <div>
-                        <button onClick={handleDeliverd} >DELIVERD</button>
+                        <button className='restock-btn' onClick={handleDeliverd} >DELIVERD</button>
                     </div>
 
                 </div>
-
-
-
-                {/* <form onSubmit={handleUpdateQuantity} className='text-center'>
-                            <input className='me-2 p-1 w-50' type="number" name="quantity" id="" placeholder='Input Your Item Number' />
-                            <input style={{ color: '#220768' }} className='px-3 py-1 fw-bold' type="submit" value="Restock" />
-                        </form> */}
 
 
                 <div className='stock'>
@@ -98,9 +103,9 @@ const UpdateStoke = () => {
 
                     <form onSubmit={handleUpdateQuantity}>
                         <h3 className='pb-5 text-center mx-4px'>Update Your Stock</h3>
-                        <input className='input-field mb-4' type="number" name="quantity" id="" placeholder='Enter Your Carton Quantity' />
+                        <input className='restock-input' type="number" name="quantity" id="" placeholder='Enter Your Carton Quantity' />
 
-                        <input className='' type="submit" value="Update" />
+                        <input className='restock-btn' type="submit" value="Restock" />
 
                     </form>
 

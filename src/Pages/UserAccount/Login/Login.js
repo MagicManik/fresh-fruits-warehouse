@@ -30,15 +30,13 @@ const Login = () => {
     }
 
 
-
     const [token] = useToken(user);
 
 
     let errorElement;
     if (error) {
-        errorElement = <p>Error: {error.message}</p>
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
-
 
 
     const navigate = useNavigate();
@@ -69,7 +67,7 @@ const Login = () => {
 
 
         // // Post data in server for token purpos
-        // fetch('https://fresh-fruits-warehouse.herokuapp.com/login', {
+        // fetch('https://shrouded-mountain-52584.herokuapp.com/login', {
         //     method: 'POST',
         //     headers: {
         //         'Content-Type': 'application/json'

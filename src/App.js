@@ -2,7 +2,9 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Pages/About/About';
 import AddItem from './Pages/AddItem/AddItem';
+import Blogs from './Pages/Blogs/Blogs';
 import Home from './Pages/Home/Home/Home';
+import ManageInventories from './Pages/ManageInventories/ManageInventories';
 import MyStocks from './Pages/MyStocks/MyStocks';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
@@ -30,13 +32,20 @@ function App() {
           <AddItem></AddItem>
         </RequireAuth>}></Route>
 
+        <Route path='/update/:id' element={<RequireAuth>
+          <UpdateStoke></UpdateStoke>
+        </RequireAuth>}></Route>
+
+        <Route path='/manage' element={<RequireAuth>
+          <ManageInventories></ManageInventories>
+        </RequireAuth>}></Route>
+
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/logout' element={<LogOut></LogOut>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/about' element={<About></About>}></Route>
 
-
-        <Route path='/update/:id' element={<UpdateStoke></UpdateStoke>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

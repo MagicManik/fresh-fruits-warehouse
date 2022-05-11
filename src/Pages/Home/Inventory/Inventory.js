@@ -11,8 +11,8 @@ const Inventory = ({ inventory }) => {
     return (
         <div className='inventory'>
             <img className='mx-auto d-block img-fluid' src={img} alt="" />
-            <h4 className='inventory-text mt-4'>{name}</h4>
-            <h5 className='inventory-text'>Per Carton: ${price}</h5>
+            <h4 className='inventory-text product-title'>{name}</h4>
+            <h5 className='inventory-text'>${price} /-</h5>
             <h6 className='inventory-text'>Quantity Availble: {quantity} </h6>
             <p className='inventory-text'>{sliceDescription}</p>
             <h6 className='inventory-text'>Supplier: <span className='text-primary'>{supplier}</span></h6>

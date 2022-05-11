@@ -11,8 +11,8 @@
 }
 
 .inventory-items img {
-    width: 91px;
-    height: 91px;
+    width: 100px;
+    height: 90px;
     margin-right: 15px;
 }
 
@@ -43,12 +43,8 @@
     cursor: pointer;
 }
 
-.add-icon {
-    color: rgb(43, 146, 43);
-    font-size: 40px;
-}
 
-.inventory-items .delete-button {
+.delete-button {
     background: rgba(235, 105, 105, 0.3);
     border: 0;
     height: 45px;
@@ -58,14 +54,16 @@
 }
 
 .delete-icon {
+    text-align: center;
     color: rgb(240, 52, 52);
-    font-size: 27px;
+    font-size: 28px;
+    padding: 2px;
 }
 
 @media screen and (max-width: 576px) {
 
     .inventory-items {
-        width: 90%;
+        width: 98%;
         margin: 20px auto;
     }
 }

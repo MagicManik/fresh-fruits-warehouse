@@ -2,7 +2,7 @@
 
 Live Website Link >> [https://fresh-fruits-warehouse-64fd3.web.app](https://fresh-fruits-warehouse-64fd3.web.app).
 
-Server Link >> [https://fresh-fruits-warehouse.herokuapp.com/](https://fresh-fruits-warehouse.herokuapp.com/).
+Server Link >> [https://shrouded-mountain-52584.herokuapp.com/](https://shrouded-mountain-52584.herokuapp.com/).
 
 ## PROJECT DESCRIPTION
 

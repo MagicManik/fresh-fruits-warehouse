@@ -37,12 +37,29 @@ const Header = () => {
                                     <CustomLink to={'/home'}>Home</CustomLink>
                                 </Nav >
 
+                                <Nav className='p-0 text-center'>
+                                    <CustomLink to={'/blogs'}>Blogs</CustomLink>
+                                </Nav >
+
+                                <Nav className='p-0 text-center'>
+                                    <CustomLink to={'/about'}>About</CustomLink>
+                                </Nav >
+
                                 {
                                     user ?
                                         <div className='nav-item'>
+
+
+                                            <Nav className='p-0 text-center'>
+                                                <CustomLink to={'/manage'}>Manage Inventory</CustomLink>
+                                            </Nav >
+
+
                                             <Nav className='p-0 text-center'>
                                                 <CustomLink to={'/mystocks'}>My Stocks</CustomLink>
                                             </Nav >
+
+
                                             <Nav className='p-0 text-center'>
                                                 <CustomLink to={'/add'}>Add Item</CustomLink>
                                             </Nav >
@@ -61,10 +78,6 @@ const Header = () => {
                                         </div>
 
                                 }
-
-                                <Nav className='p-0 text-center'>
-                                    <CustomLink to={'/about'}>About</CustomLink>
-                                </Nav >
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
