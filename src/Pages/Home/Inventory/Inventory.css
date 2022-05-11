@@ -5,7 +5,7 @@
     border-radius: 18px;
     margin: 0 auto;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     background-color: #ffffff;
     border: 1px solid #d6d6d6;
     position: relative;
@@ -26,8 +26,8 @@
     position: absolute;
     margin: 0 auto;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 25px;
+    right: 25px;
     margin: 10px;
     padding: 10px 30px;
     text-align: center;

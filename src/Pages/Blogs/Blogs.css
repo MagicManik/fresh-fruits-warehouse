@@ -1,0 +1,23 @@
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px 100px;
+    grid-gap: 50px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.blog {
+    padding: 16px;
+    border: 1px solid #d6d6d6;
+    border-radius: 18px;
+}
+
+
+@media screen and (max-width: 576px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+        margin: 25px 10px;
+        grid-gap: 30px;
+    }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import useInventorys from '../../../hooks/useInventorys';
 import Banner from '../Banner/Banner';
+import ContactForm from '../ContactForm/ContactForm';
 import Inventory from '../Inventory/Inventory';
 import OurPackage from '../OurPackage/OurPackage';
 import './Home.css'
@@ -26,6 +27,7 @@ const Home = () => {
             </div>
 
             <OurPackage></OurPackage>
+            <ContactForm></ContactForm>
         </main>
     );
 };

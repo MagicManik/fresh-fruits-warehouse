@@ -4,9 +4,11 @@ import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-
 import auth from '../../../firebase.init';
 import loginImage from '../image/login.png';
 import './Login.css'
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import useToken from '../../../hooks/useToken';
+import Loading from '../../Shared/Loading/Loading';
 
 
 const Login = () => {
@@ -25,8 +27,13 @@ const Login = () => {
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     const handleResetPassword = async () => {
-        await sendPasswordResetEmail(email);
-        alert('Sent email');
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sending email');
+        }
+        else {
+            alert('Please before enter your email address')
+        }
     }
 
 
@@ -35,8 +42,10 @@ const Login = () => {
 
     let errorElement;
     if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+        errorElement = <p className='text-danger text-center mb-0 mt-2'>Error: {error?.message}</p>
     }
+
+
 
 
     const navigate = useNavigate();
@@ -47,6 +56,11 @@ const Login = () => {
     // after get verified user redirect to the previous page
     if (token) {
         navigate(from, { replace: true });
+    }
+
+
+    if (loading || sending) {
+        return <Loading></Loading>
     }
 
 
@@ -63,24 +77,7 @@ const Login = () => {
     // ______ handle submit form _______
     const handleLoginForm = event => {
         event.preventDefault();
-        signInWithEmailAndPassword(email, password)
-
-
-        // // Post data in server for token purpos
-        // fetch('https://shrouded-mountain-52584.herokuapp.com/login', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify({ email })
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         localStorage.setItem('accessToken', data.accessToken);
-        //         navigate(from, { replace: true });
-        //         event.target.reset();
-        //     })
-
+        signInWithEmailAndPassword(email, password);
     }
 
 

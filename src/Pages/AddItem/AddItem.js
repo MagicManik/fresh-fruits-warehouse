@@ -36,15 +36,6 @@ const AddItem = () => {
                 }
             })
 
-
-
-        // ....... 
-        // name
-        // price
-        // quantity
-        // supplier
-        // description
-        // img
     }
 
     return (
