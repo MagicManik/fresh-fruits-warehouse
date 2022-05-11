@@ -2,6 +2,7 @@ import React from 'react';
 import useInventorys from '../../../hooks/useInventorys';
 import Banner from '../Banner/Banner';
 import Inventory from '../Inventory/Inventory';
+import OurPackage from '../OurPackage/OurPackage';
 import './Home.css'
 
 const Home = () => {
@@ -23,6 +24,8 @@ const Home = () => {
                     )
                 }
             </div>
+
+            <OurPackage></OurPackage>
         </main>
     );
 };

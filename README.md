@@ -27,3 +27,12 @@ NOTE: Images for this project are collected but optimized with my own Photoshop.
 * Users can login directly with their Gmail or email and password.
 
 * Users Stock is secure by Json Web Token. There is no fear of information being stolen.
+
+
+## PROJECT MATERIALS
+
+# FRONT-END
+* REACT JS, REACT ROUTER, CUSTOMLINK, BOOTSTRAP, ROW (HTML, CSS), GOOGLE FONT, FONTAWASOME ICON ETC. 
+
+# BACK-END
+* NODE JS WITH MONGODB, GOOGLE FIREBASE, EXPRESS JS, REACT FIREBASE HOOK ETC. 
