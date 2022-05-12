@@ -1,13 +1,18 @@
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ManageInventory = ({ items, handleManageInventories }) => {
     const { _id, name, price, img, quantity, supplier } = items;
 
 
-    return (
+    const navigate = useNavigate();
+    const handlePlusStock = id => {
+        navigate(`/update/${id}`)
+    }
 
+    return (
 
         <div className='inventory-items'>
             <div>
@@ -27,6 +32,10 @@ const ManageInventory = ({ items, handleManageInventories }) => {
                     <p>Supplier: {supplier}</p>
                 </div>
                 <div className="add-delete-container">
+
+                    <button onClick={() => handlePlusStock(_id)} className='plus-button' >
+                        <FontAwesomeIcon className='plus-icon' icon={faPlus}></FontAwesomeIcon>
+                    </button>
 
                     <button onClick={() => handleManageInventories(_id)} className='delete-button' >
                         <FontAwesomeIcon className='delete-icon' icon={faTrashAlt}></FontAwesomeIcon>

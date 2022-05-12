@@ -31,34 +31,34 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding-right: 15px;
+    margin-right: 10px;
 }
 
-.inventory-items .add-button {
-    background: white;
-    border: 0;
-    height: 45px;
-    width: 45px;
+.plus-button {
+    padding: 0;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    cursor: pointer;
+    border: none;
+    background: #e8f0fe;
+    color: rgb(35, 104, 252);
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
 .delete-button {
-    background: rgba(235, 105, 105, 0.3);
-    border: 0;
-    height: 45px;
-    width: 45px;
+    padding: 0;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    cursor: pointer;
+    border: none;
+    background: rgba(235, 105, 105, 0.253);
+    color: rgb(252, 35, 35);
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.delete-icon {
-    text-align: center;
-    color: rgb(240, 52, 52);
-    font-size: 28px;
-    padding: 2px;
-}
 
 @media screen and (max-width: 576px) {
 

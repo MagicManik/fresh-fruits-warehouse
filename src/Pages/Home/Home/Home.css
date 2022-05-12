@@ -7,6 +7,30 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+.inventories-btn-container {
+    margin: 0 auto;
+    background-color: #e8f0fe;
+    width: 250px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+
+.inventories-btn {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    font-size: large;
+}
+
+
+.inventories-btn:hover {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    font-size: large;
+}
+
 
 @media screen and (max-width: 576px) {
     .inventory-container {

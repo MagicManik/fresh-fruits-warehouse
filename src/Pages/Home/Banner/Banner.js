@@ -28,7 +28,7 @@ const Banner = () => {
                         <div className='col-lg-6 col-12 p-3'>
                             <h1 className='carousel-heading'>Fresh Fruits Warehouse
                                 !!</h1>
-                            <p className='carousel-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, aperiam fuga quidem, dolorum voluptatibus consequatur corporis eaque dolor facilis nisi animi perspiciatis accusamus exercitationem facere quisquam quaerat laboriosam eveniet qui.</p>
+                            <p className='carousel-text'>Feel free to stock your fruit in Fresh Fruits Warehouse. We provide you with a clean space as well as a conducive environment to prevent fruit rot and keep your fruit fresh. Also our monitoring team members will monitor your stock all the time and keep you updated about your stock. So feel free to stock your fruit in our ware house.</p>
                             <button onClick={handleMyWarehouse} className='my-warehouse-btn'>MY WAREHOUSE</button>
 
                         </div>
@@ -43,7 +43,7 @@ const Banner = () => {
                     <div className='carousel-body'>
                         <div className='col-lg-6 col-12 p-3'>
                             <h1 className='carousel-heading'>Fresh Fruits Warehouse !!</h1>
-                            <p className='carousel-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, aperiam fuga quidem, dolorum voluptatibus consequatur corporis eaque dolor facilis nisi animi perspiciatis accusamus exercitationem facere quisquam quaerat laboriosam eveniet qui.</p>
+                            <p className='carousel-text'>Feel free to stock your fruit in Fresh Fruits Warehouse. We provide you with a clean space as well as a conducive environment to prevent fruit rot and keep your fruit fresh. Also our monitoring team members will monitor your stock all the time and keep you updated about your stock. So feel free to stock your fruit in our ware house.</p>
                             <button onClick={handleMyWarehouse} className='my-warehouse-btn'>MY WAREHOUSE</button>
 
                         </div>
@@ -58,7 +58,7 @@ const Banner = () => {
                     <div className='carousel-body'>
                         <div className='col-lg-6 col-12 p-3'>
                             <h1 className='carousel-heading'>Fresh Fruits Warehouse !!</h1>
-                            <p className='carousel-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, aperiam fuga quidem, dolorum voluptatibus consequatur corporis eaque dolor facilis nisi animi perspiciatis accusamus exercitationem facere quisquam quaerat laboriosam eveniet qui.</p>
+                            <p className='carousel-text'>Feel free to stock your fruit in Fresh Fruits Warehouse. We provide you with a clean space as well as a conducive environment to prevent fruit rot and keep your fruit fresh. Also our monitoring team members will monitor your stock all the time and keep you updated about your stock. So feel free to stock your fruit in our ware house.</p>
                             <button onClick={handleMyWarehouse} className='my-warehouse-btn'>MY WAREHOUSE</button>
 
 

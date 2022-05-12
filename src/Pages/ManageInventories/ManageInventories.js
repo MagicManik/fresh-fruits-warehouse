@@ -1,9 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useInventorys from '../../hooks/useInventorys';
 import ManageInventory from '../ManageInventory/ManageInventory';
 
 const ManageInventories = () => {
     const [inventorys, setInventorys] = useInventorys();
+    // use navigate hook
+    const navigate = useNavigate();
+
+
+    // add items button handler
+    const AddItemsButtonHandle = () => {
+        navigate('/add');
+    }
 
     const handleManageInventories = id => {
         const proceed = window.confirm('Are you sure to delete?');
@@ -39,8 +48,9 @@ const ManageInventories = () => {
                             </ManageInventory>)
                     }
                 </div>
-            </div>
 
+            </div>
+            <button onClick={AddItemsButtonHandle} className='inventories-btn-container d-block my-5 text-primary fw-bold border-0'>Add More Items</button>
         </section>
     );
 };

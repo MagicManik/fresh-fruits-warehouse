@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import useInventory from '../../hooks/useInventory';
 import updatingImg from './image/updating-stock.png'
 import './UpdateStoke.css'
@@ -38,8 +38,6 @@ const UpdateStoke = () => {
                 // console.log('Success:', data);
             })
     };
-
-
 
 
     // restock form submission handle
@@ -87,7 +85,13 @@ const UpdateStoke = () => {
                     <h5 className='inventory-text my-2'>{name}</h5>
                     <h6 className='inventory-text'>Per Carton: ${price}</h6>
                     <h6 className='inventory-text'>Product ID: {_id}</h6>
-                    <h6 className='inventory-text'>Quantity Availble: {quantity} </h6>
+                    {
+                        quantity === 0
+                            ?
+                            <p className='text-danger fw-bold'>Sold Out</p>
+                            :
+                            <p>Quantity: {quantity} </p>
+                    }
                     <small className='inventory-text'>{description}</small>
                     <h6 className='inventory-text my-3'>Supplier: <span className='text-primary'>{supplier}</span></h6>
 
@@ -110,6 +114,9 @@ const UpdateStoke = () => {
                     </form>
 
                 </div>
+            </div>
+            <div className='inventories-btn-container my-5'>
+                <Link className='inventories-btn' to={'/manage'}>Manage Inventories</Link>
             </div>
         </section>
     );

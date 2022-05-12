@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <section>
             <div className='footer-container'>
-                <div>
+                <div className='mb-3 py-3'>
                     <h2>About</h2>
                     <hr />
                     <p><FontAwesomeIcon icon={faLocationPin}></FontAwesomeIcon> 1206, Kafrul Dhaka</p>
@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
 
 
-                <div>
+                <div className='mb-3 py-3'>
                     <h2 className='text-center'>Connect Us</h2>
 
                     <div className='social-icon-container'>
@@ -35,7 +35,7 @@ const Footer = () => {
                 </div>
 
 
-                <div>
+                <div className='mb-3 py-3'>
                     <h2 className='text-center'>Opening Our</h2>
                     <hr />
 

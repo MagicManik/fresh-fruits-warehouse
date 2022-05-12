@@ -2,10 +2,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    margin: 100px 100px;
+    margin: 160px 100px 50px 100px;
     grid-gap: 40px;
 }
-
 
 .pakage {
     box-shadow: 0px 2px 70px 0px rgb(110 130 208 / 18%);
@@ -15,7 +14,6 @@
     position: relative;
     margin-top: 50px;
 }
-
 
 
 .pakage-title,
@@ -43,7 +41,6 @@
     align-items: center;
 }
 
-
 .book-now-btn {
     font-family: 'Open Sans', sans-serif;
     border-radius: 10px;
@@ -63,17 +60,13 @@
     background-color: #379eff;
 }
 
-
 .book-now-btn:hover {
     background-color: #1e65ff;
 }
 
-
 .golden-package {
     margin-top: 0;
 }
-
-
 
 @media screen and (max-width: 576px) {
     .pakage-container {
@@ -81,7 +74,7 @@
         grid-template-columns: 1fr;
         justify-content: center;
         margin: 12px auto;
-        grid-gap: 30px;
+        width: 90%;
     }
 
     .golden-package {
