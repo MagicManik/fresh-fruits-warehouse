@@ -52,7 +52,6 @@ const Login = () => {
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
 
-
     // after get verified user redirect to the previous page
     if (token) {
         navigate(from, { replace: true });

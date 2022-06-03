@@ -4,7 +4,7 @@ Live Website Link > [https://fresh-fruits-warehouse-64fd3.web.app](https://fresh
 
 Server Link > [https://shrouded-mountain-52584.herokuapp.com/](https://shrouded-mountain-52584.herokuapp.com/).
 
-## PROJECT DESCRIPTION
+# PROJECT DESCRIPTION
 
 `` This is a remarkable, classic and elegant design of react project. The great thing is that I have been able to design as much as I like in this project.
  This project has tried its best to customize the components of React Bootstrap and design as we wish. I've tried customization on my own. Alhamdulillah I have been successful most of the time. Alhamdulillah again, In this project I was able to do a lot of customizations on my own which I couldn't find on YouTube and Google.
@@ -31,8 +31,8 @@ NOTE: Images for this project are collected but optimized with my own Photoshop.
 
 ## PROJECT MATERIALS
 
-# FRONT-END
+## FRONT-END
 * REACT JS, REACT ROUTER, CUSTOMLINK, BOOTSTRAP, ROW (HTML, CSS), GOOGLE FONT, FONTAWASOME ICON ETC. 
 
-# BACK-END
+## BACK-END
 * NODE JS WITH MONGODB, GOOGLE FIREBASE, EXPRESS JS, REACT FIREBASE HOOK ETC. 

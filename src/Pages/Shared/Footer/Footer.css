@@ -5,7 +5,7 @@
     font-family: 'Open Sans', sans-serif;
     background-image: linear-gradient(to right top, #051937, #031d44, #022252, #03255f, #0a296d);
     color: #fff;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .social-icon-container {
@@ -42,5 +42,6 @@
         grid-template-columns: 1fr;
         padding: 10px;
         text-align: center;
+        margin-top: 30px;
     }
 }

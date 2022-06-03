@@ -21,7 +21,7 @@ const ContactForm = () => {
 
                     <input className='add-input-field' type="email" name="supplier" id="" placeholder='Your email address' required />
 
-                    <textarea className='add-input-field' name="email" id="" cols="30" rows="3" placeholder='Your email' required></textarea>
+                    <textarea className='add-input-field' name="email" id="" cols="30" rows="3" placeholder='Your message' required></textarea>
 
                     <input className='add-item-button' type="submit" value="Send" />
 
