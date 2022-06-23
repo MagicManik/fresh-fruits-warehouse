@@ -1,35 +1,49 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Inventory.css'
-
 
 const Inventory = ({ inventory }) => {
     const { _id, img, name, price, supplier, quantity, description } = inventory;
 
     const sliceDescription = description.slice(0, 200);
 
+    const navigate = useNavigate();
+
+    const handleUpdate = id => {
+        navigate(`/update/${id}`)
+    }
+
     return (
-        <div className='inventory'>
-            <img className='mx-auto d-block img-fluid' src={img} alt="" />
-            <h4 className='inventory-text product-title'>{name}</h4>
-            <h5 className='inventory-text'>${price} /-</h5>
-            {
-                quantity === 0
-                    ?
-                    <p className='text-danger fw-bold'>Sold Out</p>
-                    :
-                    <p>Quantity Abailable: {quantity} </p>
-            }
-            <p className='inventory-text'>{sliceDescription}</p>
-            <h6 className='inventory-text'>Supplier: <span className='text-primary'>{supplier}</span></h6>
+        <section className='inventory mt-5'>
+            <div className='inventory-top'>
+                <div className='vertical-border'>
+                    <img className='fruits-img' src={img} alt="" />
 
-            <div>
+                </div>
+                <div>
+                    <h4 className='product-title'>{name}</h4>
+                    <h3 className='text-primary price'>${price} /-</h3>
+                    <p className='inventory-text'>Supplier: {supplier}</p>
+                    {
+                        quantity === 0
+                            ?
+                            <p className='text-danger inventory-text fw-bold'>Sold Out</p>
+                            :
+                            <p className='inventory-text'>Available Stock: {quantity} </p>
+                    }
 
-                <Link className='inventory-button' to={`/update/${_id}`}>Update</Link>
+
+                </div>
+
+
 
             </div>
 
-        </div>
+            <p className='description-text'>{sliceDescription}..</p>
+            <div className='d-flex'>
+                <button className='btn btn-primary update-button' onClick={() => handleUpdate(_id)}>Update</button>
+            </div>
+        </section>
     );
 };
 

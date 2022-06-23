@@ -5,7 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import CustomLink from '../CustomLink/CustomLink';
-import './Header.css'
+import './Header.css';
 
 const Header = () => {
     const [user] = useAuthState(auth);
@@ -33,51 +33,50 @@ const Header = () => {
                         <Offcanvas.Body className='p-0 ps-2 off-canvas-body'>
                             <Nav className="justify-content-end flex-grow-1">
 
-                                <Nav className='p-0 text-center'>
+                                <Nav className='nav-item-style'>
                                     <CustomLink to={'/home'}>Home</CustomLink>
                                 </Nav >
 
-                                <Nav className='p-0 text-center'>
+                                {
+                                    user &&
+                                    <div className='nav-item'>
+
+
+                                        <Nav className='nav-item-style'>
+                                            <CustomLink to={'/manage'}>Manage Inventory</CustomLink>
+                                        </Nav >
+
+
+                                        <Nav className='nav-item-style'>
+                                            <CustomLink to={'/mystocks'}>My Stocks</CustomLink>
+                                        </Nav >
+
+
+                                        <Nav className='nav-item-style'>
+                                            <CustomLink to={'/add'}>Add Item</CustomLink>
+                                        </Nav >
+                                    </div>
+                                }
+
+                                <Nav className='nav-item-style'>
                                     <CustomLink to={'/blogs'}>Blogs</CustomLink>
                                 </Nav >
-
-                                <Nav className='p-0 text-center'>
+                                <Nav className='nav-item-style'>
                                     <CustomLink to={'/about'}>About</CustomLink>
                                 </Nav >
 
                                 {
                                     user ?
-                                        <div className='nav-item'>
-
-
-                                            <Nav className='p-0 text-center'>
-                                                <CustomLink to={'/manage'}>Manage Inventory</CustomLink>
-                                            </Nav >
-
-
-                                            <Nav className='p-0 text-center'>
-                                                <CustomLink to={'/mystocks'}>My Stocks</CustomLink>
-                                            </Nav >
-
-
-                                            <Nav className='p-0 text-center'>
-                                                <CustomLink to={'/add'}>Add Item</CustomLink>
-                                            </Nav >
-                                            <Nav className='p-0 text-center'>
-                                                <button className='log-out-btn text-center mx-3' onClick={logout}>Log Out</button>
-                                            </Nav>
-                                        </div>
+                                        <Nav className='nav-item-style'>
+                                            <button className='log-out-btn text-center' onClick={logout}>Log Out</button>
+                                        </Nav>
                                         :
-                                        <div className='nav-item'>
-                                            <Nav className='p-0 text-center'>
-                                                <CustomLink to={'/login'}>Login</CustomLink>
-                                            </Nav>
-                                            <Nav className='p-0 text-center'>
-                                                <CustomLink to={'/register'}>Register</CustomLink>
-                                            </Nav>
-                                        </div>
-
+                                        <Nav className='nav-item-style'>
+                                            <CustomLink to={'/login'}>Login</CustomLink>
+                                        </Nav>
                                 }
+
+
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>

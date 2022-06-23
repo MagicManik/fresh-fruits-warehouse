@@ -18,9 +18,6 @@ const AddItem = () => {
 
         const item = { name, price, quantity, description, img, supplier, email };
 
-        // console.log(item);
-
-
         fetch('https://shrouded-mountain-52584.herokuapp.com/inventory', {
             method: 'POST',
             headers: {

@@ -18,13 +18,17 @@ NOTE: Images for this project are collected but optimized with my own Photoshop.
 
 ## PROJECT FEATCHER
 
-* Responsive Navbar with offcanvas in small devices
+* This is a compact Warehouse Management application.
 
-* Users can create an account and update stock
+* This application provides different types of storing packages of fruits according to clients' demands.
 
-* Users will have see their own stock and manage inventory
+* Here users can store their fruits by paying a reasonable rental fee. That means the user will be able to manage his inventory.
 
-* Users can login directly with their Gmail or email and password.
+* Authorized users of this application can deliver and restock his/her fruits.
+
+* In this application, I'm using responsive Navbar with offcanvas in small devices
+
+* Users can Sign Up and Sign in via email and password and directly Sign in through google.
 
 * Users Stock is secure by Json Web Token. There is no fear of information being stolen.
 
@@ -32,7 +36,7 @@ NOTE: Images for this project are collected but optimized with my own Photoshop.
 ## PROJECT MATERIALS
 
 ## FRONT-END
-* REACT JS, REACT ROUTER, CUSTOMLINK, BOOTSTRAP, ROW (HTML, CSS), GOOGLE FONT, FONTAWASOME ICON ETC. 
+* REACT JS, REACT ROUTER, CUSTOMLINK, BOOTSTRAP, HTML, CSS, GOOGLE FONT, FONTAWASOME ICON ETC. 
 
 ## BACK-END
-* NODE JS WITH MONGODB, GOOGLE FIREBASE, EXPRESS JS, REACT FIREBASE HOOK ETC. 
+* NODE JS WITH MONGODB, GOOGLE FIREBASE, EXPRESS JS, REACT FIREBASE HOOK. JSON WEB TOKEN (JWT) ETC. 

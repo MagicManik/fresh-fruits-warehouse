@@ -13,11 +13,9 @@ const SocialLogin = () => {
     // Using firebase hook
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
-
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
-
 
     const [token] = useToken(user);
 
@@ -25,12 +23,10 @@ const SocialLogin = () => {
         return <Loading></Loading>
     }
 
-
     let errorElement;
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
-
 
     if (token) {
         navigate(from, { replace: true });
@@ -49,11 +45,7 @@ const SocialLogin = () => {
             <div>
                 <button className='social-login-btn'><img src={facebook} alt="" /> Facebook Login</button>
 
-
             </div>
-
-
-
         </div>
     );
 };

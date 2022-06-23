@@ -24,11 +24,12 @@ const OurPackage = () => {
             <div className='pakage golden-package'>
                 <h3 className='pakage-title text-primary'>Golden</h3>
                 <h1 className='my-4 text-center text-primary'><sup className='text-secondary'>$</sup>289<sub className='text-secondary'>/Year</sub></h1>
+                <hr />
                 <p className='pacakage-text'>Standard Management Your Producst with full space</p>
                 <p className='pacakage-text'><FontAwesomeIcon icon={faCheck}></FontAwesomeIcon> <span></span> Full space access</p>
-                <p className='pacakage-text'><FontAwesomeIcon icon={faCheck}></FontAwesomeIcon> Experienced team</p>
+                <p className='pacakage-text'><FontAwesomeIcon icon={faCheck}></FontAwesomeIcon> Secuirty facility</p>
                 <p className='pacakage-text'><FontAwesomeIcon icon={faCheck}></FontAwesomeIcon> Latest technology support</p>
-                <p className='pacakage-text'><FontAwesomeIcon icon={faCheck}></FontAwesomeIcon> Support only day time</p>
+                <p className='pacakage-text'><FontAwesomeIcon icon={faCheck}></FontAwesomeIcon>Support 10pm - 12pm</p>
                 <p className='pacakage-text'><FontAwesomeIcon icon={faCheck}></FontAwesomeIcon> pay as plan</p>
 
                 <button onClick={() => alert('Goldren Package Successfully Booked !')} className='book-now-btn'>Book Now</button>
@@ -43,7 +44,6 @@ const OurPackage = () => {
                 <p className='pacakage-text'><FontAwesomeIcon icon={faCheck}></FontAwesomeIcon> Guide and monitor your event</p>
                 <p className='pacakage-text'><FontAwesomeIcon icon={faCheck}></FontAwesomeIcon> Exprienced team support</p>
                 <p className='pacakage-text'><FontAwesomeIcon icon={faCheck}></FontAwesomeIcon> Latest technology support</p>
-                <p className='pacakage-text'><FontAwesomeIcon icon={faCheck}></FontAwesomeIcon> Premium feature used</p>
                 <p className='pacakage-text'><FontAwesomeIcon icon={faCheck}></FontAwesomeIcon> pay as plan</p>
 
                 <button onClick={() => alert('Platinum Successfully Booked !')} className='book-now-btn'>Book Now</button>

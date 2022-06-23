@@ -7,7 +7,7 @@ import './UpdateStoke.css'
 const UpdateStoke = () => {
     const { id } = useParams();
 
-    const [inventory, setInventory] = useInventory(id);
+    const [inventory] = useInventory(id);
 
     const { _id, img, name, price, quantity, description, supplier } = inventory;
 
@@ -35,10 +35,8 @@ const UpdateStoke = () => {
         })
             .then(response => response.json())
             .then(data => {
-                // console.log('Success:', data);
             })
     };
-
 
     // restock form submission handle
     const handleUpdateQuantity = event => {
@@ -50,7 +48,6 @@ const UpdateStoke = () => {
         // update quantity
         const restockedQuantity = event.target.quantity.value;
         const newQuantity = parseInt(inventory.quantity) + parseInt(restockedQuantity);
-
 
         if (newQuantity < 0) {
             return alert('Insufficient Quantity')
@@ -69,47 +66,53 @@ const UpdateStoke = () => {
         })
             .then(response => response.json())
             .then(data => {
-                // console.log('Success:', data);
                 event.target.reset();
             })
     };
 
     return (
-        <section>
-            <h3 className='text-center my-5'>Please Update Your <span className='text-danger'>{name}</span> stock !!</h3>
+        <section className='stock-update-section'>
+            <h4 className='text-center pb-4'>Please update your stock of <span className='text-danger'>{name}</span>!</h4>
             <div className='stock-container'>
 
                 <div className='stock'>
+                    <img className='stock-img' src={img} alt="" />
+                    <div className='stock-details'>
+                        <div className='vertical-border'>
+                            <h5 className='my-2'>{name}</h5>
+                            <p>Product ID: {_id}</p>
+                        </div>
 
-                    <img className='img-fluid d-block mx-auto' src={img} alt="" />
-                    <h5 className='inventory-text my-2'>{name}</h5>
-                    <h6 className='inventory-text'>Per Carton: ${price}</h6>
-                    <h6 className='inventory-text'>Product ID: {_id}</h6>
-                    {
-                        quantity === 0
-                            ?
-                            <p className='text-danger fw-bold'>Sold Out</p>
-                            :
-                            <p>Quantity: {quantity} </p>
-                    }
-                    <small className='inventory-text'>{description}</small>
-                    <h6 className='inventory-text my-3'>Supplier: <span className='text-primary'>{supplier}</span></h6>
+                        <div>
+                            <h6 className='stock-text'>Per Carton: ${price}</h6>
+                            {
+                                quantity === 0
+                                    ?
+                                    <p className='stock-text text-danger fw-bold mt-2'>Sold Out</p>
+                                    :
+                                    <p className='stock-text text-white fw-bold quantity py-1 mt-2 pe-2'>Quantity: {quantity} </p>
+                            }
+                            <p className='stock-text mt-1'>Supplier: {supplier}</p>
 
+                        </div>
+                    </div>
+
+
+                    <p className='pt-2'>{description}</p>
                     <div>
-                        <button className='restock-btn' onClick={handleDeliverd} >DELIVERD</button>
+                        <button className='restock-btn btn btn-primary' onClick={handleDeliverd} >DELIVERD</button>
                     </div>
 
                 </div>
 
-
                 <div className='stock'>
-                    <img className='img-fluid d-block mx-auto' src={updatingImg} alt="" />
+                    <img className='restock-img' src={updatingImg} alt="" />
 
                     <form onSubmit={handleUpdateQuantity}>
                         <h3 className='pb-5 text-center mx-4px'>Update Your Stock</h3>
                         <input className='restock-input' type="number" name="quantity" id="" placeholder='Enter Your Carton Quantity' />
 
-                        <input className='restock-btn' type="submit" value="Restock" />
+                        <input className='restock-btn btn btn-primary' type="submit" value="Restock" />
 
                     </form>
 

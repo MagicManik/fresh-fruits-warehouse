@@ -2,7 +2,7 @@
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: saturate(180%) blur(20px);
     border-bottom: 1px solid rgb(226, 226, 226);
-    padding: 12px !important;
+    padding: 6px !important;
 }
 
 .title-logo {
@@ -49,11 +49,17 @@
     display: flex;
 }
 
+.nav-item-style {
+    text-align: center;
+}
+
 .log-out-btn {
     background-color: transparent;
     border: none;
-    color: #5f6368;
-    font-size: 1.20rem;
+    color: #202124;
+    text-decoration: none;
+    font-size: .920rem;
+    letter-spacing: .2px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -69,5 +75,13 @@
     .nav-item {
         display: flex;
         flex-direction: column;
+    }
+
+    .log-out-btn {
+        font-family: 'Roboto', sans-serif;
+        color: #202124;
+        text-decoration: none;
+        font-size: .875rem;
+        letter-spacing: .2px;
     }
 }

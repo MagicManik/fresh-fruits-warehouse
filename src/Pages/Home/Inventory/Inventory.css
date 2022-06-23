@@ -1,72 +1,68 @@
 .inventory {
-    width: 100%;
-    height: 660px;
-    padding: 28px;
-    border-radius: 18px;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    background-color: #ffffff;
-    border: 1px solid #d6d6d6;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 16px;
+    height: 370px;
     position: relative;
+    background-color: #fff;
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+    transition: all .3s cubic-bezier(0, 0, .5, 1);
 }
 
-
-.inventory-text {
-    font-family: 'Open Sans', sans-serif;
+.inventory:hover {
+    box-shadow: 2px 4px 16px rgb(0 0 0 / 16%);
+    transform: scale3d(1.01, 1.01, 1.01);
 }
 
+.inventory-top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fruits-img {
+    width: 100%;
+    display: block;
+    padding-right: 10px;
+}
+
+.vertical-border {
+    border-right: 1px solid rgb(50, 122, 255);
+}
 
 .product-title {
-    margin-top: 10px;
+    text-align: right;
+    margin-bottom: 2px;
 }
 
+.price {
+    text-align: right;
+    padding-bottom: 5px;
+}
 
-.inventory-button {
-    position: absolute;
+.inventory-text {
+    text-align: right;
+    margin-bottom: 0;
+}
+
+.description-text {
+    font-size: .980rem;
+    padding-top: 20px;
+
+}
+
+.update-button {
+    width: 95%;
     margin: 0 auto;
-    bottom: 0;
-    left: 25px;
-    right: 25px;
-    margin: 10px;
-    padding: 11px 30px;
-    text-align: center;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;
-    border-radius: 10px;
-    display: block;
-    border: 0px;
-    background: linear-gradient(120deg, rgba(55, 118, 255, 0) 0%, #1e65ff 100%);
-    background-color: #379eff;
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
 }
-
-.inventory-button:hover {
-    background-position: right center;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-
-.inventory-button:active {
-    transform: scale(0.95);
-}
-
 
 @media screen and (max-width: 576px) {
     .inventory {
-        height: 660px;
-        padding: 15px;
-    }
-
-    .product-title {
-        margin-top: 5px;
-    }
-
-    .inventory-text {
-        text-align: center;
+        margin: 48px 13px 13px 13px;
     }
 }
