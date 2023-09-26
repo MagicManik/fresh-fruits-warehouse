@@ -1,11 +1,15 @@
-.pakage-container {
+.package-container {
+    background-color: #f5f5f7;
+}
+
+.fackage-wrapper {
+    max-width: 1440px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    padding: 160px 120px 50px 120px;
-    grid-gap: 60px;
-    background-color: #f5f5f7;
-
+    padding: 50px 120px 50px 120px;
+    grid-gap: 50px;
+    margin: 0 auto;
 }
 
 .pakage {
@@ -84,13 +88,13 @@
 }
 
 @media screen and (max-width: 576px) {
-    .pakage-container {
+
+    .fackage-wrapper {
         display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
         padding: 12px;
         display: block;
-        margin: 0 auto;
         width: 90%;
     }
 

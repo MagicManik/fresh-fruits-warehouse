@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Banner = () => {
-
     const navigate = useNavigate();
     const handleMyWarehouse = () => {
         navigate('/mystocks')
@@ -21,8 +20,8 @@ const Banner = () => {
     };
 
     return (
-        <section>
-            <Carousel className='mt-4' activeIndex={index} onSelect={handleSelect}>
+        <section style={{ maxWidth: "1440px", margin: "0 auto" }}>
+            <Carousel activeIndex={index} onSelect={handleSelect}>
                 <Carousel.Item>
                     <div className='carousel-body'>
                         <div className='col-lg-6 col-12 p-3'>

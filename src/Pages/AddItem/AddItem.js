@@ -18,7 +18,7 @@ const AddItem = () => {
 
         const item = { name, price, quantity, description, img, supplier, email };
 
-        fetch('https://shrouded-mountain-52584.herokuapp.com/inventory', {
+        fetch('https://fruit-manik-server.onrender.com/inventory', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

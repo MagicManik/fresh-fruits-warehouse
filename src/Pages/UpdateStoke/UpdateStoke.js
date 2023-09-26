@@ -24,7 +24,7 @@ const UpdateStoke = () => {
         const updatedItem = { newQuantity };
 
         // update data to server
-        const url = `https://shrouded-mountain-52584.herokuapp.com/inventory/${id}`
+        const url = `https://fruit-manik-server.onrender.com/inventory/${id}`
 
         fetch(url, {
             method: 'PUT',
@@ -56,7 +56,7 @@ const UpdateStoke = () => {
         const updatedItem = { newQuantity };
 
         // update data to server
-        const url = `https://shrouded-mountain-52584.herokuapp.com/inventory/${id}`
+        const url = `https://fruit-manik-server.onrender.com/inventory/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {

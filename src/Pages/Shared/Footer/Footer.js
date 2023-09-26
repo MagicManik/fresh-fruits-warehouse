@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <section>
+        <section style={{ maxWidth: "1440px", margin: "0 auto" }}>
             <div className='footer-container'>
                 <div className='mb-3 py-3'>
                     <h2>About</h2>

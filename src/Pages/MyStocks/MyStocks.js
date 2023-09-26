@@ -17,7 +17,7 @@ const MyStocks = () => {
         const getOrders = async () => {
             const email = user.email;
 
-            const url = `https://shrouded-mountain-52584.herokuapp.com/stock?email=${email}`
+            const url = `https://fruit-manik-server.onrender.com/stock?email=${email}`
             try {
                 const { data } = await axiosPrivate.get(url);
                 setStocks(data)
@@ -40,7 +40,7 @@ const MyStocks = () => {
 
         if (proceed) {
 
-            const url = `https://shrouded-mountain-52584.herokuapp.com/inventory/${id}`
+            const url = `https://fruit-manik-server.onrender.com/inventory/${id}`
 
             fetch(url, {
                 method: 'DELETE'
